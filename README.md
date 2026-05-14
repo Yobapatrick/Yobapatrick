@@ -80,6 +80,17 @@
 
 ## 🚀 Projets phares
 
+### 🐱🐶 **Dogs vs Cats — Benchmark CNN vs Régression Logistique** *(déployé)*
+> *Étude expérimentale isolant l'apport du biais inductif convolutif — PyTorch Lightning + démo live*
+- 🔬 **Comparaison rigoureuse** : régression logistique sur pixels bruts (**56.4%**) vs CNN custom 4 blocs (**88.6%** accuracy) — données, loss et trainer **strictement identiques**, seule l'architecture varie
+- 🧱 **Package Python modulaire** (`src/`) : DataModule, modèles, training, évaluation, inférence — configs **YAML avec héritage**, zéro hyperparamètre en dur
+- ⚡ **PyTorch Lightning** : `BaseClassifier` partagé garantissant une comparaison symétrique, callbacks (EarlyStopping, ModelCheckpoint, LR Monitor), scheduler cosine
+- 🧪 **14 tests unitaires** (pytest), **CI GitHub Actions** (ruff + black + pytest sur Python 3.10/3.11), **Dockerfile** multi-stage
+- 🎮 **Démo live déployée** sur **Hugging Face Spaces** : comparaison des 2 modèles côte-à-côte sur n'importe quelle image uploadée
+- 📊 Suite d'évaluation complète : matrices de confusion, courbes ROC, distributions de probabilités, galerie d'erreurs qualitatives
+
+🔗 [**Code source**](https://github.com/Yobapatrick/dogs-vs-cats) · [**Démo live 🤗**](https://huggingface.co/spaces/PatrickYoba/dogs-vs-cats)
+
 ### 🦺 **SafetyVision — Monitoring temps réel de la conformité EPI sur chantier** *(en cours)*
 > *Computer Vision + MLOps complet, déployé en production*
 - 📦 Constitution et exploration d'un **dataset de 2 801 images au format YOLO** (casques, gilets, masques, ouvriers, engins)
